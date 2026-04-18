@@ -11,8 +11,8 @@ void applyEmergencyMedkit(Player &p) {
 }
 
 int main() {
-    Player p1("Alpha");
-    Player p2("Beta");
+    Player p1("Alpha", 12, CharacterRole::Antagonist);
+    Player p2("Beta" , 10, CharacterRole::Protagonist);
 
     // The game keeps going as long as both are ALINE
     while (p1.isAlive() && p2.isAlive()){

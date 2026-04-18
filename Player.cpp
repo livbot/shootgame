@@ -1,9 +1,9 @@
 #include "Player.h"
 #include <iostream>
 
-//The Constructor:: sets up the Player
+//The Constructor now "calls" the Character constructor first
 
-Player::Player(std::string n):name(n), health(100), status(PlayerStatus::Healthy){}
+Player::Player(std::string n, int l, CharacterRole r):Character(n,l,r), health(100), status(PlayerStatus::Healthy){}
 
 // The takeDamage implementation
 void Player::takeDamage(int damage){
@@ -39,6 +39,7 @@ bool Player::isAlive(){
     return status !=PlayerStatus::Dead;
 }
 
-std::string Player::getName() {
-    return name;
+void Player::introduce(){
+    std::cout << "I am " << name << ", and I am ready to shoot!" << std::endl;
 }
+
