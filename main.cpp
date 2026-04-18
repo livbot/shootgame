@@ -1,5 +1,7 @@
 #include <iostream>
 #include "Player.h"
+#include "Character.h"
+
 
 // A helper function that takes a REFERENCE to a player
 // Passing by reference (&) means we modify the original player
